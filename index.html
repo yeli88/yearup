@@ -34,7 +34,11 @@
                   <li class="empty">No scans yet</li>
                 </ul>
                 <transition-group name="scans" tag="ul">
-                  <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }} {{scan.date}}</li>
+                  <li v-for="scan in scans" :key="scan.date" :title="scan.content">
+                    <p>{{ scan.content }}</p>
+                    <p id="time">{{scan.date}}</p>
+
+                  </li>
                 
                 </transition-group>
               </section>
